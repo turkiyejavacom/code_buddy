@@ -1,0 +1,48 @@
+{
+  "name": "CodeBuddy",
+  "project_info": {
+    "project_number": "264335454036",
+    "project_id": "tjc-code-buddy",
+    "storage_bucket": "tjc-code-buddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264335454036:android:b48bbe8581e751b83662c1",
+        "android_client_info": {
+          "package_name": "com.tjc.codebuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264335454036-hm5sp706su2i7egvesg4b7psmvd5t8ra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tjc.codebuddy",
+            "certificate_hash": "3467973d285721bd7a93c5dd2bb28d093a79af56"
+          }
+        },
+        {
+          "client_id": "264335454036-phn5dbm6tav46agubea2f0m23rhi7g18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM69hYq5CEByAMg53-zo8ln01yI1nYsC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264335454036-phn5dbm6tav46agubea2f0m23rhi7g18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   primaryButtonColor: Colors.black,
                   onPressedAction: signInWithGithub,
                   logoPath: 'assets/images/logos/github_logo_alternative.png',
-                  buttonText: "Sign in with Google",
+                  buttonText: "Sign in with Github",
                   buttonTextColor: Colors.white,
                 )
               ],

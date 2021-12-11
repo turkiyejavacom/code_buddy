@@ -13,6 +13,7 @@ void main() async {
 
 Future<void> initializeFirebase() async {
   await Firebase.initializeApp();
+
   RemoteConfig remoteConfig = RemoteConfig.instance;
   await remoteConfig.fetchAndActivate();
 }
@@ -23,12 +24,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const LoginPage(),
+    return const MaterialApp(
+      home: LoginPage(),
     );
   }
 }

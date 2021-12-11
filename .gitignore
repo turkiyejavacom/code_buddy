@@ -390,3 +390,13 @@ android/.idea/codeStyles/
 android/app/src/profile/
 
 android/app/src/debug/
+
+pubspec.lock
+
+ios/Flutter/
+
+android/.idea/
+
+android/gradle/wrapper/
+
+.metadata

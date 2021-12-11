@@ -1,3 +1,4 @@
+import 'package:code_buddy/core/context/localization/resource/languages.dart';
 import 'package:code_buddy/screen/atom/signin_button.dart';
 import 'package:code_buddy/service/signin/github_signin_service.dart';
 import 'package:code_buddy/service/signin/google_signin_service.dart';
@@ -26,20 +27,47 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const FlutterLogo(style: FlutterLogoStyle.stacked, size: 150),
+                Text(Languages.of(context)!.logIn,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontWeight: FontWeight.bold)
+                ),
+                const SizedBox(height: 15),
                 SignInButton(
                     primaryButtonColor: Colors.white,
                     onPressedAction: signInWithGoogle,
                     logoPath: 'assets/images/logos/google_logo.png',
-                    buttonText: "Sign in with Google"
-                ),
+                    buttonText: Languages.of(context)!.signInWithGoogle),
                 const SizedBox(height: 5),
                 SignInButton(
                   primaryButtonColor: Colors.black,
                   onPressedAction: signInWithGithub,
                   logoPath: 'assets/images/logos/github_logo_alternative.png',
-                  buttonText: "Sign in with Github",
+                  buttonText: Languages.of(context)!.signInWithGithub,
                   buttonTextColor: Colors.white,
-                )
+                ),
+                const SizedBox(height: 15),
+                Text(Languages.of(context)!.register,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontWeight: FontWeight.bold)
+                ),
+                const SizedBox(height: 15),
+                SignInButton(
+                    primaryButtonColor: Colors.white,
+                    onPressedAction: () {
+                      // Will be implemented
+                    },
+                    logoPath: 'assets/images/logos/google_logo.png',
+                    buttonText: Languages.of(context)!.signUpWithGoogle),
+                const SizedBox(height: 5),
+                SignInButton(
+                  primaryButtonColor: Colors.black,
+                  onPressedAction: () {
+                    // Will be implemented
+                  },
+                  logoPath: 'assets/images/logos/github_logo_alternative.png',
+                  buttonText: Languages.of(context)!.signUpWithGithub,
+                  buttonTextColor: Colors.white,
+                ),
               ],
             ),
           ),

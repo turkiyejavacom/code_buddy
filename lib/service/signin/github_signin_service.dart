@@ -23,7 +23,7 @@ class GithubSignInService {
     final result = await gitHubSignIn.signIn(context);
 
     // Create a credential from the access token
-    final githubAuthCredential = GithubAuthProvider.credential(result.token!);
+    final githubAuthCredential = GithubAuthProvider.credential(result.token ?? '');
 
     // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(githubAuthCredential);

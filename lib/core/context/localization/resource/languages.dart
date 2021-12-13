@@ -6,10 +6,13 @@ abstract class Languages {
     return Localizations.of<Languages>(context, Languages);
   }
 
+  String get appName;
   String get logIn;
   String get register;
   String get signInWithGoogle;
   String get signInWithGithub;
   String get signUpWithGoogle;
   String get signUpWithGithub;
+  String get enterYourName;
+  String get enterYourLastName;
 }

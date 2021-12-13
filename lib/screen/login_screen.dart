@@ -1,5 +1,6 @@
 import 'package:code_buddy/core/context/localization/resource/languages.dart';
-import 'package:code_buddy/screen/atom/signin_button.dart';
+import 'package:code_buddy/screen/user/register_user.dart';
+import 'package:code_buddy/widget/atom/signin_button.dart';
 import 'package:code_buddy/service/signin/github_signin_service.dart';
 import 'package:code_buddy/service/signin/google_signin_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -29,8 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                 const FlutterLogo(style: FlutterLogoStyle.stacked, size: 150),
                 Text(Languages.of(context)!.logIn,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontWeight: FontWeight.bold)
-                ),
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 15),
                 SignInButton(
                     primaryButtonColor: Colors.white,
@@ -48,13 +48,19 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 15),
                 Text(Languages.of(context)!.register,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontWeight: FontWeight.bold)
-                ),
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 15),
                 SignInButton(
                     primaryButtonColor: Colors.white,
                     onPressedAction: () {
-                      // Will be implemented
+                      signInWithGoogle();
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                RegisterUser(user: _userCredential?.user)),
+                      );
                     },
                     logoPath: 'assets/images/logos/google_logo.png',
                     buttonText: Languages.of(context)!.signUpWithGoogle),
@@ -62,7 +68,14 @@ class _LoginPageState extends State<LoginPage> {
                 SignInButton(
                   primaryButtonColor: Colors.black,
                   onPressedAction: () {
-                    // Will be implemented
+                    signInWithGithub();
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              RegisterUser(user: _userCredential?.user)),
+                    );
                   },
                   logoPath: 'assets/images/logos/github_logo_alternative.png',
                   buttonText: Languages.of(context)!.signUpWithGithub,

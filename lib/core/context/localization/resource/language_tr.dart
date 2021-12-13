@@ -1,6 +1,10 @@
 import 'package:code_buddy/core/context/localization/resource/languages.dart';
 
 class LanguagesTr extends Languages {
+
+  @override
+  String get appName => "Code Buddy";
+
   @override
   String get logIn => "Giriş Yap";
 
@@ -18,4 +22,10 @@ class LanguagesTr extends Languages {
 
   @override
   String get signUpWithGoogle => "Sign Up With Google";
+
+  @override
+  String get enterYourName => "İsminizi giriniz";
+
+  @override
+  String get enterYourLastName => "Soy isminizi giriniz";
 }

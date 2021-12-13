@@ -1,5 +1,7 @@
 import 'package:code_buddy/core/context/localization/locale_constants.dart';
 import 'package:code_buddy/core/context/localization/localization_delegate.dart';
+import 'package:code_buddy/core/context/localization/resource/language_tr.dart';
+import 'package:code_buddy/core/context/localization/resource/languages.dart';
 import 'package:code_buddy/screen/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
@@ -74,7 +76,10 @@ class _MyAppState extends State<MyApp> {
         }
         return supportedLocales.first;
       },
-      home: const LoginPage(),
+      home: Scaffold(
+          appBar: AppBar(title: Text(LanguagesTr().appName)),
+          body: LoginPage()
+      ),
     );
   }
 }
